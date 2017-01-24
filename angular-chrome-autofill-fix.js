@@ -60,7 +60,7 @@
 
             function validator(modelValue, viewValue) {
 
-                if (isChrome() && elem[0].matches("input[type=password]:-webkit-autofill")) {
+                if (isChrome() && elem[0].matches("input:-webkit-autofill")) {
                     $log.info("bypassing required validator because of Chrome auto-filling");
                     $interval.cancel(timer);
                     return true;
